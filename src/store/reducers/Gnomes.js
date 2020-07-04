@@ -24,7 +24,8 @@ const productReducer = (state = initialState, action) => {
     case SET_GNOMES:
       return {
         ...state,
-        gnomes: 0,
+        gnomes: action.payload,
+        isLoading: false,
       };
     default:
       return state;

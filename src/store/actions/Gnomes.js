@@ -13,7 +13,7 @@ export const loadingInProgress = (bool) => ({
 
 export const setGnomes = (data) => ({
   type: actionType.SET_GNOMES,
-  products: data,
+  payload: data,
 });
 
 export function getGnomes() {
