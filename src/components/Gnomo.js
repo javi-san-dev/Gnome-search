@@ -1,14 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Gnomo.css";
+import Image from "./Image";
 
 const Gnomo = (props) => {
   const { name, age, friends, hairColor, professions, image } = props;
   const [imageStyle, setImageStyle] = useState({ display: "none" });
-  console.log(professions);
-  useEffect(() => {
-    const image = document.getElementById("gnome-image").height;
-    console.log(image);
-  }, image);
 
   const styleHandler = () => {
     imageStyle.display === "none"
@@ -19,7 +15,7 @@ const Gnomo = (props) => {
   return (
     <div className="gnomo-container" onClick={styleHandler}>
       <div className="gnomo-card">
-        <img src={image} id="gnome-image" />
+        <img src={image} />
         <div className="gnomo-info">
           <div className="gnome-name">
             <h6>{name}</h6>
@@ -46,6 +42,8 @@ const Gnomo = (props) => {
           </div>
         </div>
       </div>
+
+      <Image style={imageStyle} image={image} />
     </div>
   );
 };
