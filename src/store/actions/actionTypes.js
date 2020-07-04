@@ -1,0 +1,3 @@
+export const LOADING_ERROR = "LOADING_ERROR";
+export const LOADING_IN_PROGRESS = "LOADING_IN_PROGRESS";
+export const SET_GNOMES = "SET_GNOMES";
