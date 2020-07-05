@@ -49,10 +49,10 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App" data-test="appComponent">
       <Search value={value} setValue={(val) => setValue(val)} />
       {isLoading ? (
-        <div className="app-spinner">
+        <div className="app-spinner" data-test="spinnerComponent">
           <Spinner color="primary" />
         </div>
       ) : null}
