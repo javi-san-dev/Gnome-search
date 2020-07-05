@@ -13,3 +13,11 @@
   width: auto;
   height: 90vh;
 }
+
+@media only screen and (max-width: 500px) {
+  .image-modal img {
+    margin-top: 20px;
+    width: 90vw;
+    height: auto;
+  }
+}

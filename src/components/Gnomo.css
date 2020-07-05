@@ -83,3 +83,16 @@
   margin-bottom: 5px;
   margin-left: 3px;
 }
+
+@media only screen and (max-width: 1000px) {
+  .gnomo-container {
+    min-width: 180px;
+    max-width: 250px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .gnomo-container {
+    width: 100%;
+  }
+}

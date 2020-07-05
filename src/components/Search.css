@@ -4,12 +4,6 @@
   margin-bottom: 20px;
   padding: 10px;
 }
-
-.header-search {
-  margin: auto;
-  width: 450px;
-  display: flex;
-}
 .header-search-input {
   height: 40px;
   border: none;
@@ -24,5 +18,13 @@
   height: 14px;
   position: relative;
   left: 30px;
-  top: 14px;
+  top: 0px;
+}
+
+@media only screen and (max-width: 800px) {
+  .search-component {
+  }
+  .header-search-input {
+    width: 80vw;
+  }
 }

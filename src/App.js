@@ -54,7 +54,11 @@ function App() {
   return (
     <div className="App">
       <Search value={value} setValue={(val) => setValue(val)} />
-      {isLoading ? <Spinner color="primary" /> : null}
+      {isLoading ? (
+        <div className="app-spinner">
+          <Spinner color="primary" />
+        </div>
+      ) : null}
       {gno}
     </div>
   );
