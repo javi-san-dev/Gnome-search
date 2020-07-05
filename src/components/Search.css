@@ -22,8 +22,6 @@
 }
 
 @media only screen and (max-width: 800px) {
-  .search-component {
-  }
   .header-search-input {
     width: 80vw;
   }

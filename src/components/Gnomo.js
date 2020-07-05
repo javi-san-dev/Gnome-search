@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import "./Gnomo.css";
 import Image from "./Image";
 
@@ -46,6 +47,15 @@ const Gnomo = (props) => {
       <Image style={imageStyle} image={image} />
     </div>
   );
+};
+
+Gnomo.propTypes = {
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number.isRequired,
+  friends: PropTypes.array.isRequired,
+  hairColor: PropTypes.string.isRequired,
+  professions: PropTypes.array.isRequired,
+  image: PropTypes.string.isRequired,
 };
 
 export default Gnomo;

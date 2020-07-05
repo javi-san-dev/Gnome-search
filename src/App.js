@@ -12,15 +12,12 @@ function App() {
   const dispatch = useDispatch();
   const [gnomes, setGnomes] = useState(50);
   const [value, setValue] = useState("");
-
-  useEffect(() => {
-    window.addEventListener("scroll", (e) => scrollHandler(e));
-  }, []);
+  const gnomos = [];
 
   useEffect(() => {
     dispatch(getGnomes());
+    window.addEventListener("scroll", scrollHandler);
   }, []);
-  const gno = [];
 
   if (AllGnomes.Brastlewark) {
     let result = AllGnomes.Brastlewark.filter((elem) => elem.id < gnomes);
@@ -30,7 +27,7 @@ function App() {
       );
     }
     result.map((elem) => {
-      gno.push(
+      gnomos.push(
         <Gnome
           key={elem.id}
           id={elem.id}
@@ -45,7 +42,7 @@ function App() {
     });
   }
 
-  const scrollHandler = (e) => {
+  const scrollHandler = () => {
     const scrollPosition = Math.round(window.innerHeight + window.scrollY);
     if (scrollPosition === document.body.offsetHeight)
       setGnomes((gnomes) => gnomes + 50);
@@ -59,7 +56,7 @@ function App() {
           <Spinner color="primary" />
         </div>
       ) : null}
-      {gno}
+      {gnomos}
     </div>
   );
 }
