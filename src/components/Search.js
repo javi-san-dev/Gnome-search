@@ -10,7 +10,7 @@ const Search = (props) => {
   };
 
   return (
-    <div className="search-component">
+    <div className="search-component" data-test="searchComponent">
       <img
         src={process.env.PUBLIC_URL + "search.png"}
         className="header-search-image"
@@ -18,6 +18,7 @@ const Search = (props) => {
       />
       <input
         className="header-search-input"
+        data-test="searchInput"
         placeholder="Search by name"
         name="search"
         value={value}
