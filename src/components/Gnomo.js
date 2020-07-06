@@ -14,28 +14,32 @@ const Gnomo = (props) => {
   };
 
   return (
-    <div className="gnomo-container" onClick={styleHandler}>
+    <div
+      className="gnomo-container"
+      onClick={styleHandler}
+      data-test="gnomeComponent"
+    >
       <div className="gnomo-card">
-        <img src={image} alt="img" />
+        <img src={image} data-test="gnome-image" alt="img" />
         <div className="gnomo-info">
           <div className="gnome-name">
-            <h6>{name}</h6>
-            <p>{age} years</p>
+            <h6 data-test="product-name">{name}</h6>
+            <p data-test="gnome-age">{age} years</p>
           </div>
 
-          <p>
+          <p data-test="gnome-hairColor">
             <b>Hair color:</b> {hairColor}
           </p>
           <p>
             <b>Friends:</b>
           </p>
-          <div className="gnome-friends">
+          <div className="gnome-friends" data-test="gnome-friends">
             {friends.map((pro, i) => (
               <p key={i}>{pro},</p>
             ))}
           </div>
 
-          <div className="gnome-professions">
+          <div className="gnome-professions" data-test="gnome-professions">
             <div>professions:</div>
             {professions.map((pro, i) => (
               <p key={i}>{pro}</p>
