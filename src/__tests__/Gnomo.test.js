@@ -71,3 +71,8 @@ it("Should render Image component", () => {
   const component = findByTestAtrr(setUp({ ...props }), "gnomeComponent");
   expect(component.find(Image).length).toBe(1);
 });
+
+it("Should render Image component with display none", () => {
+  const component = findByTestAtrr(setUp({ ...props }), "gnomeComponent");
+  expect(component.find(Image).prop("style")).toHaveProperty("display", "none");
+});
