@@ -33,6 +33,8 @@ function App() {
           id={elem.id}
           name={elem.name}
           age={elem.age}
+          weight={elem.weight}
+          height={elem.height}
           friends={elem.friends}
           hairColor={elem.hair_color}
           professions={elem.professions}

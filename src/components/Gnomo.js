@@ -4,7 +4,16 @@ import "./Gnomo.css";
 import Image from "./Image";
 
 const Gnomo = (props) => {
-  const { name, age, friends, hairColor, professions, image } = props;
+  const {
+    name,
+    age,
+    weight,
+    height,
+    friends,
+    hairColor,
+    professions,
+    image,
+  } = props;
   const [imageStyle, setImageStyle] = useState({ display: "none" });
 
   const styleHandler = () => {
@@ -29,6 +38,12 @@ const Gnomo = (props) => {
 
           <p data-test="gnome-hairColor">
             <b>Hair color:</b> {hairColor}
+          </p>
+          <p data-test="gnome-hairColor">
+            <b>weight:</b> {Math.round(weight)}
+          </p>
+          <p data-test="gnome-hairColor">
+            <b>height:</b> {Math.round(height)}
           </p>
           <p>
             <b>Friends:</b>
@@ -56,6 +71,8 @@ const Gnomo = (props) => {
 Gnomo.propTypes = {
   name: PropTypes.string.isRequired,
   age: PropTypes.number.isRequired,
+  weight: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired,
   friends: PropTypes.array.isRequired,
   hairColor: PropTypes.string.isRequired,
   professions: PropTypes.array.isRequired,
