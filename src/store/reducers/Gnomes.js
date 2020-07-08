@@ -10,7 +10,7 @@ const initialState = {
   gnomes: [],
 };
 
-const productReducer = (state = initialState, action) => {
+const gnomesReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOADING_ERROR:
       return {
@@ -32,4 +32,4 @@ const productReducer = (state = initialState, action) => {
   }
 };
 
-export default productReducer;
+export default gnomesReducer;
