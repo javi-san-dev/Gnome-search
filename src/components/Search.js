@@ -12,7 +12,7 @@ const Search = (props) => {
   return (
     <div className="search-component" data-test="searchComponent">
       <img
-        src={process.env.PUBLIC_URL + "search.png"}
+        src={require(`../static/search.png`)}
         className="header-search-image"
         alt="img"
       />
